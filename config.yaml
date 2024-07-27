@@ -8,7 +8,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: /favicon.ico
 
     footer:
         since:
@@ -118,8 +118,40 @@ params:
             id:
 
     widgets:
-        homepage: []
-        page: []
+        homepage: [
+            {
+                type: tag-cloud,
+                params: {
+                    limit: 10
+                }
+            },
+            {
+                type: categories,
+                params: {
+                    limit: 10,
+                }
+            },
+            {
+                type: archives
+            }
+        ]
+        page: [
+            {
+                type: tag-cloud,
+                params: {
+                    limit: 10
+                }
+            },
+            {
+                type: categories,
+                params: {
+                    limit: 10,
+                }
+            },
+            {
+                type: archives
+            }
+        ]
 
     opengraph:
         twitter:
@@ -147,3 +179,40 @@ params:
             enabled: true
         content:
             enabled: true
+
+menu:
+    main:
+        - identifier: home
+          name: 网站主页
+          url: /
+          weight: 1
+          params:
+            icon: home
+
+        - identifier: about
+          name: 关于峰峰
+          url: /about
+          weight: 2
+          params:
+            icon: user
+
+        - identifier: resume
+          name: 个人简历
+          url: /resume
+          weight: 3
+          params:
+            icon: archives
+
+    social:
+        - identifier: github
+          url: https://github.com/NielsLee
+          weight: 1
+          params:
+            icon: brand-github
+
+        - identifier: mail
+          url: mailto:NielsLee@outlook.com
+          weight: 2
+          params:
+            icon: messages
+        
