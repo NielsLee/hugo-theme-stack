@@ -137,6 +137,9 @@ params:
         ]
         page: [
             {
+                type: toc
+            },
+            {
                 type: tag-cloud,
                 params: {
                     limit: 10
@@ -202,6 +205,13 @@ menu:
           weight: 3
           params:
             icon: archives
+
+        - identifier: links
+          name: 作品链接
+          url: /links
+          weight: 4
+          params:
+            icon: link
 
     social:
         - identifier: github
